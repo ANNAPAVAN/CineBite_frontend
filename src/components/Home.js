@@ -9,7 +9,7 @@ function Home() {
   return (
     <>
     <Navbar_/>
-    <h1 className="home-head">Home Page</h1>
+    <h1 className="home-head">HOME PAGE</h1>
     </>
     // <Navbar bg="light" shadow="lg" expand="lg">
     //   <Navbar.Brand href="#home">HOME PAGE</Navbar.Brand>
