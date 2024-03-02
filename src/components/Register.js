@@ -37,6 +37,7 @@ const Register = () => {
   };
 
   return (
+    <div className="logreg-background">
     <div className="register-container">
       <h1>Register</h1>
       <form onSubmit={handleSubmit} className="register-form">
@@ -71,6 +72,7 @@ const Register = () => {
           Register
         </button>
       </form>
+    </div>
     </div>
   );
 };

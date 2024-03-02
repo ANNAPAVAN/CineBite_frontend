@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Login = () => {
   const [name, setName] = useState('');
@@ -50,6 +51,8 @@ const Login = () => {
   }, []);
 
   return (
+    <div className="logreg-background">
+
     <div className="login-container mt-5">
       <h1 className="login-title">Login</h1>
       <form onSubmit={handleSubmit}>
@@ -77,8 +80,9 @@ const Login = () => {
         </div>
         <button type="submit" className="login-button">Login</button>
         <br />
-        <h5 className="login-link">If you're not registered, <a href="/register">click here</a></h5>
+        <h5 className="login-link">If you're not registered, <Link to="/register">click here</Link></h5>
       </form>
+    </div>
     </div>
   );
 };

@@ -23,3 +23,5 @@ function Navbar_() {
 }
 
 export default Navbar_;
+
+// npm install react-bootstrap bootstrap
