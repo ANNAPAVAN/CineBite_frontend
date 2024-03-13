@@ -31,7 +31,10 @@ function MovieAdmin() {
 
     axios
       .post(`${process.env.REACT_APP_BACKEND}/postmovie`, post)
-      .then((res) => console.log(res))
+      .then((res) => {
+        console.log(res)
+        alert("Movie posted Successfully")
+        })
       .catch((err) => {
         alert("Movie insertion Failure")
         console.log(err)});

@@ -30,8 +30,14 @@ function AdminMoviePage() {
 
     axios
       .delete(`${process.env.REACT_APP_BACKEND}/deletemovie/${id}`)
-      .then((res) => console.log(res))
-      .catch((err) => console.log(err));
+      .then((res) => 
+      {
+        alert("Movie Deleted")
+        console.log(res)})
+      .catch((err) => {
+        alert("Movie Not Deleted")
+        console.log(err)
+      });
 
   };
 

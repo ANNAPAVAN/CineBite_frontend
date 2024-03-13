@@ -25,8 +25,13 @@ function AdminFoodPage() {
 
     axios
       .delete(`${process.env.REACT_APP_BACKEND}/deletefood/${id}`)
-      .then((res) => console.log(res))
-      .catch((err) => console.log(err));
+      .then((res) => {
+        console.log(res)
+        alert("Food Item Deleted");
+      })
+      .catch((err) => {
+        alert("Food Item Not Deleted");
+        console.log(err)});
 
   };
 

@@ -33,10 +33,12 @@ function FoodAdmin() {
       .post(`${process.env.REACT_APP_BACKEND}/postfood`, post)
       .then((res) => {
         console.log(res);
+        console.log("posteddddddddd");
+        alert("Food item Posted Successfully")
       })
       .catch((err) => {
         console.log(err);
-        alert("Food item not inserted");
+        alert("Food item not Posted");
       });
   };
   
