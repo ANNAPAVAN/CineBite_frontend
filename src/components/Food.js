@@ -21,10 +21,13 @@ function Food() {
   return (
     <>
     <Navbar_/>
-    <div className="food-container">
-      
-      <div>
-        <h1>FOOD PAGE</h1>
+    <div>
+      <br></br>
+      <br></br>
+      <br></br>
+    <h1>FOOD PAGE</h1>
+      <div className="food-container">
+        
         {cats.map((cat) => (
           <div key={cat._id} className="food-item">
             <h3 className="food-price">Price: {cat.price}</h3>

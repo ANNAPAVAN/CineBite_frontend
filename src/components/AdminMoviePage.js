@@ -44,9 +44,13 @@ function AdminMoviePage() {
   return (
     <>
     <AdNav/>
-    <div className="movie-container">
-      <div>
-        <h1>MOVIE PAGE</h1>
+    <div >
+    <br></br>
+      <br></br>
+      <br></br>
+    <h1>MOVIE PAGE</h1>
+      <div className="movie-container">
+        
         {cats.map((cat) => (
           <div key={cat._id} className="movie-item">
             <h3 className="movie-price">Price: {cat.price}</h3>

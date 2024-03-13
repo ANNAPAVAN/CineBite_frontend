@@ -167,69 +167,84 @@
 
   /* Food  */
 
-.food-container {
-  margin-top: 70px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  .food-container {
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 70px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    justify-items: center;
   }
   
   .food-item {
-    margin: 20px;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: #fff;
     text-align: center;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .food-item:hover {
+    transform: translateY(-5px);
   }
   
   .food-price {
     font-size: 18px;
     color: #333;
+    margin-bottom: 10px; 
   }
   
   .food-image {
-    max-width: 300px;
-    margin-top: 10px;
+    max-width: 100%; 
+    border-radius: 8px; 
   }
-
+  
 
   /* Movie  */
-
-.movie-container {
+  .movie-container {
+    margin-left: 50px;
+    margin-right: 50px;
     margin-top: 70px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    justify-items: center;
   }
   
   .movie-item {
-    margin: 20px;
     padding: 20px;
-    
     border: 1px solid #ccc;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: #fff;
     text-align: center;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .movie-item:hover {
+    transform: translateY(-5px);
   }
   
   .movie-price {
     font-size: 18px;
     color: #333;
+    margin-bottom: 10px;
   }
   
   .movie-image {
-    max-width: 300px;
-    margin-top: 10px;
+    max-width: 100%;
+    border-radius: 8px;
   }
-
   
-.movie-totalamount{
-  position: fixed;
-  margin-left: 400px;
-}
+  .movie-totalamount {
+    position: fixed;
+    top: 70px; 
+    right: 50px; 
+  }
+  
 
 
   /* Sport  */
