@@ -16,9 +16,28 @@
 }
 
 .home-section p {
+  
   font-size: 18px;
   line-height: 1.5;
-  color:#000000
+  color: hwb(0 0% 100%);
+  background-color: transparent; /* Set background to transparent */
+  border-radius: 10px;
+}
+
+
+.home-container > div {
+  margin-left: 20px;
+  
+}
+
+.home-container {
+  /* background-image: url("https://images.creativemarket.com/0.1.0/ps/4833749/1820/1213/m1/fpnw/wm1/wbqwlmk8mlit5kyyjpb0oeujbpxl7cdhdsl5x2gpo2chgdpuw1ulo22kdnnhhl76-.jpg?1532958573&s=79f2b8451dbf2e4e01281e7c7cc641e5"); */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
@@ -72,12 +91,15 @@
     background-color: #0056d2;
   }
   
+  .reg-error-message{
+    color: red;
+  }
 
   /* Login page */
 
   
   .logreg-background {
-    background-image: url('https://wallpapercave.com/wp/wp3284848.gif');
+    /* background-image: url('https://wallpapercave.com/wp/wp3284848.gif'); */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

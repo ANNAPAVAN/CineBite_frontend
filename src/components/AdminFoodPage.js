@@ -14,7 +14,7 @@ function AdminFoodPage() {
   ]);
 
   useEffect(() => {
-    fetch(`${process.env.REACT_APP_BACKEND}/getfood`)
+    fetch(`${process.env.REACT_APP_BACKEND}/api/auth/getfood`)
       .then((res) => res.json())
       .then((jsonRes) => setCats(jsonRes));
   }, []);
@@ -24,7 +24,7 @@ function AdminFoodPage() {
     console.log(id);
 
     axios
-      .delete(`${process.env.REACT_APP_BACKEND}/deletefood/${id}`)
+      .delete(`${process.env.REACT_APP_BACKEND}/api/auth/deletefood/${id}`)
       .then((res) => {
         console.log(res)
         alert("Food Item Deleted");

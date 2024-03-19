@@ -13,7 +13,7 @@ function Food() {
 
   useEffect(() => {
     console.log('Backend URL:', process.env.REACT_APP_BACKEND);
-    fetch(`${process.env.REACT_APP_BACKEND}/getfood`)
+    fetch(`${process.env.REACT_APP_BACKEND}/api/auth/getfood`)
       .then((res) => res.json())
       .then((jsonRes) => setCats(jsonRes));
   }, []);

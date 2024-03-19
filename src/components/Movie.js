@@ -12,7 +12,7 @@ function Movie() {
   ]);
 
   useEffect(() => {
-    fetch(`${process.env.REACT_APP_BACKEND}/getmovie`)
+    fetch(`${process.env.REACT_APP_BACKEND}/api/auth/getmovie`)
       .then((res) => res.json())
       .then((jsonRes) => setCats(jsonRes));
   }, []);

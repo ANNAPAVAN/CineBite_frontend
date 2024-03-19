@@ -30,7 +30,7 @@ function FoodAdmin() {
     e.preventDefault();
   
     axios
-      .post(`${process.env.REACT_APP_BACKEND}/postfood`, post)
+      .post(`${process.env.REACT_APP_BACKEND}/api/auth/postfood`, post)
       .then((res) => {
         console.log(res);
         console.log("posteddddddddd");

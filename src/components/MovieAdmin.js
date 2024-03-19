@@ -30,7 +30,7 @@ function MovieAdmin() {
     e.preventDefault();
 
     axios
-      .post(`${process.env.REACT_APP_BACKEND}/postmovie`, post)
+      .post(`${process.env.REACT_APP_BACKEND}/api/auth/postmovie`, post)
       .then((res) => {
         console.log(res)
         alert("Movie posted Successfully")

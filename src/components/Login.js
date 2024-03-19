@@ -22,7 +22,7 @@ const Login = () => {
     }
 
     try {
-      const response = await axios.post(`${process.env.REACT_APP_BACKEND}/login`, {
+      const response = await axios.post(`${process.env.REACT_APP_BACKEND}/api/auth/login`, {
         name,
         password,
       });
