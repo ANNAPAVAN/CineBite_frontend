@@ -6,10 +6,18 @@ import axios from 'axios';
 import AdNav from './AdNav';
 
 function FoodAdmin() {
+
+  const owner = localStorage.getItem("user_id");
+  const hotel = localStorage.getItem("hotel");
+  const address = localStorage.getItem("address");
+
   const [post, setPost] = useState({
+    ownerid: owner,
+    name:"",
     image: "",
     price: "",
-    hotel: "",
+    hotel: hotel,
+    address: address,
   });
 
   const handleImageChange = (e) => {
@@ -62,6 +70,14 @@ function FoodAdmin() {
           <div className="food-admin-text">Upload Food Item</div>
           <Form action="#">
             <FormGroup>
+            <div className="food-admin-input-row">
+                <div className="food-admin-input-data">
+                  <Form.Control type="text" required name="name" value={post.name} onChange={handleChange} />
+                  <div className="food-admin-underline"></div>
+                  <label htmlFor="name">Item</label>
+                </div>
+              </div>
+
               <div className="food-admin-input-row">
                 <div className="food-admin-input-data">
                   <Form.Control type="text" required name="price" value={post.price} onChange={handleChange} />
@@ -72,9 +88,17 @@ function FoodAdmin() {
 
               <div className="food-admin-input-row">
                 <div className="food-admin-input-data">
-                  <Form.Control type="text" required name="hotel" value={post.hotel} onChange={handleChange} />
+                  <Form.Control type="text" required name="hotel" value={post.hotel} onChange={handleChange} disabled/>
                   <div className="food-admin-underline"></div>
                   <label htmlFor="hotel">Hotel</label>
+                </div>
+              </div>
+
+              <div className="food-admin-input-row">
+                <div className="food-admin-input-data">
+                  <Form.Control type="text" required name="address" value={post.address} onChange={handleChange} disabled/>
+                  <div className="food-admin-underline"></div>
+                  <label htmlFor="address">Address</label>
                 </div>
               </div>
 

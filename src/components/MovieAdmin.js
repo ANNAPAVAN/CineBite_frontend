@@ -10,6 +10,9 @@ function MovieAdmin() {
     image: "",
     price: "",
     theatre: "",
+    area:"",
+    movie:"",
+    showtime:"",
   });
 
   const handleImageChange = (e) => {
@@ -74,6 +77,33 @@ function MovieAdmin() {
                   <label htmlFor="theatre">Theatre</label>
                 </div>
               </div>
+
+              <div className="movie-admin-input-row">
+                <div className="movie-admin-input-data">
+                  <Form.Control type="text" required name="movie" value={post.movie} onChange={handleChange} />
+                  <div className="movie-admin-underline"></div>
+                  <label htmlFor="movie">Movie</label>
+                </div>
+              </div>
+
+              <div className="movie-admin-input-row">
+                <div className="movie-admin-input-data">
+                  <Form.Control type="text" required name="showtime" value={post.showtime} onChange={handleChange} />
+                  <div className="movie-admin-underline"></div>
+                  <label htmlFor="showtime">ShowTime</label>
+                </div>
+              </div>
+
+              <div className="movie-admin-input-row">
+                <div className="movie-admin-input-data">
+                  <Form.Control type="text" required name="area" value={post.area} onChange={handleChange} />
+                  <div className="movie-admin-underline"></div>
+                  <label htmlFor="area">Area</label>
+                </div>
+              </div>
+
+
+
 
               <div className="movie-admin-input-row">
                 <div className="movie-admin-input-data">

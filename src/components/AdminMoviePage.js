@@ -5,11 +5,14 @@ import axios from "axios"
 import AdNav from './AdNav';
 
 function AdminMoviePage() {
-  const [cats, setCats] = useState([
+  const [cats, setCats] = useState([  
     {
-      image: '',
+      image: '', 
       price: '',
       theatre: '',
+      movie:'',
+      area:'',
+      showtime:'',
     },
   ]);
 
@@ -48,14 +51,17 @@ function AdminMoviePage() {
     <br></br>
       <br></br>
       <br></br>
-    <h1>MOVIE PAGE</h1>
+    <h1 className="food-hotel-head">MOVIE PAGE</h1>
       <div className="movie-container">
         
         {cats.map((cat) => (
           <div key={cat._id} className="movie-item">
-            <h3 className="movie-price">Price: {cat.price}</h3>
-            <h3 className="theatre-price">Theatre: {cat.theatre}</h3>
-            <img src={cat.image} alt="Movie" className="movie-image" />
+              <img src={cat.image} alt="Movie" className="movie-image" />
+              <h5 className="movie-price">Price: <strong>₹ {cat.price}</strong></h5> 
+              <h5 className="theatre-price">Movie: <strong>{cat.movie}</strong></h5>
+              <h5 className="theatre-price">Theatre: <strong>{cat.theatre}</strong></h5>
+              <h5 className="theatre-price">Timings: <strong>{cat.showtime}</strong></h5>
+              <h5 className="theatre-price">Area: <strong>{cat.area}</strong></h5>
             <Button
                     onClick={() => deletePost(cat._id)}
                     variant="outline-danger"

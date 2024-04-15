@@ -12,64 +12,7 @@ const Login = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  
 
-  useEffect(() => {
-    // console.log("home");
-    const fetchTokenData = async () => {
-      try {
-        // Get the token from local storage
-        const token = localStorage.getItem("token");
-        if (!token) {
-          console.log("Token not found in local storage");
-          return;
-        }       
-  
-        const config = {
-          headers: {
-            Authorization: `Bearer ${token}`
-          }
-        };
-        // const atoken = localStorage.getItem("atoken");
-        // const aconfig = {
-        //   headers: {
-        //     Authorization: `Bearer ${atoken}`
-        //   }
-        // };
-        // const response2 = await axios.get(`${process.env.REACT_APP_BACKEND}/api/auth/getToken`, aconfig);
-        // console.log(response2.data,"-------------------------");
-   
-        const response = await axios.get(`${process.env.REACT_APP_BACKEND}/api/auth/getToken`, config);
-        console.log(response.data);
-        const myuser_id = localStorage.getItem("user_id");
-        if(response.data._id === myuser_id)
-        {
-          if(response.data.email==="admin@gmail.com"){
-            navigate("/manager")
-            return;
-          }
-          navigate("/home");
-          return;
-        }
-        alert("Invalid User");
-        localStorage.removeItem("token");
-        localStorage.removeItem("user_id");
-        
-  
-      } catch (error) {
-        console.error('Error fetching data:');
-        if (error.response && error.response.status === 401) {
-          alert("Token is invalid");
-          localStorage.removeItem("token");
-          localStorage.removeItem("user_id");
-          navigate("/");
-        }
-      }
-    };
-  
-    fetchTokenData();
-  }, [navigate]);
-  
   
   
 
@@ -77,7 +20,7 @@ const Login = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post(`${process.env.REACT_APP_BACKEND}/api/auth/login`, {
+      const response = await axios.post(`${process.env.REACT_APP_BACKEND}/api/auth/adminlogin`, {
         email,
         password,
       });
@@ -87,11 +30,8 @@ const Login = () => {
       if (response.status === 200 && response.data.redirect) {
         localStorage.setItem("token", response.data.JWTtoken);
         localStorage.setItem("user_id", response.data.user_id);
-        if (email === 'admin@gmail.com') {
-          // alert("Admin Login Success")
-          navigate('/manager');
-          return;
-        }
+        
+
         navigate(response.data.redirect);
       }
     } catch (error) {
@@ -130,7 +70,7 @@ const Login = () => {
             </div>
             <button type="submit" className="login-button">Login</button>
             <br />
-            <h5 className="login-link">If you're not registered, <Link to="/register">click here</Link></h5>
+            <h5 className="login-link">If you're not registered, <Link to="/adminregister">click here</Link></h5>
           </form>
         </div>
       )}
