@@ -19,13 +19,12 @@ function ManagerNav() {
   };
 
   return (
-    <Navbar bg="light" shadow="lg" expand="lg" className="pavan" fixed="top">
-      <Navbar.Brand as={Link} to="/manager">Home</Navbar.Brand>
-
-        
+<Navbar bg="light" shadow="lg" expand="lg" className="pavan" fixed="top">
+      <Navbar.Brand as={Link} to="/home">Home</Navbar.Brand>
+      <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ml-auto" style={navItemsStyle}>
-
+          
           <Nav.Link onClick={handleLogout}>LogOut</Nav.Link>
         </Nav>
       </Navbar.Collapse>

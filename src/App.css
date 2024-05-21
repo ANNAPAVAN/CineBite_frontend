@@ -1,3 +1,7 @@
+
+
+
+
 /* Admin.css */
 
 
@@ -13,14 +17,25 @@
 } */
 
 .admin-container {
-  /* background-image: url('https://images.pexels.com/photos/17510944/pexels-photo-17510944/free-photo-of-meal-with-gin.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'); */
+  background-image: url('https://wallpaperaccess.com/full/1537562.png');
   background-size: cover;
   background-position: center;
   height: 100vh;
-  display: flex;
+  display: flex; 
   justify-content: center;
   align-items: center;
-  background-color: rgb(239, 221, 190);
+   background-color: rgb(239, 221, 190);
+}
+/* https://wallpaper.dog/large/5543612.jpg */
+.admin-container-movie {
+  background-image: url('https://wallpaper.dog/large/5543612.jpg ');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+   background-color: rgb(239, 221, 190);
 }
 
 .admin-head {
@@ -639,7 +654,7 @@
   padding: 20px;
   margin-left: 50px;
   margin-right: 50px;
-  margin-top: 50px;
+  margin-top: 100px;
   display: flex; 
   align-items: center; 
   background-color: #fb8a194d;
@@ -778,75 +793,203 @@
   text-decoration: none;
 }
 
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .home-para2,
+  .home-para3,
+  .home-para5 {
+    flex-direction: column;
+    margin: 50px 10px; /* Adjusted margins */
+  }
 
+  #pic,
+  #pic1 {
+    height: auto;
+    max-height: 300px; /* Adjusted max-height */
+  }
 
-/* publiHome */
-/* Styling for the main heading */
-/* PublicHome.css */
-
-.container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
+  .hp1 {
+    font-size: 20px; /* Adjusted font size */
+  }
 }
 
-.publichome-head {
-  text-align: center;
-  margin-top: 50px;
-  font-weight: bold;
-  color: #333; /* Headings color */
+/* publichome */
+
+
+.hp {
+  font-size: 50px;
 }
 
-.intro {
-  text-align: center;
-  margin-bottom: 30px;
-  color: #666; /* Intro text color */
+.train-effect {
+  animation: moveTrain 5s infinite;
 }
 
-.sections {
+@keyframes moveTrain {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.home-para1 {
+  margin-left: 50px;
+  margin-top: 100px;
+  margin-right: 50px;
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 30px;
+  align-items: center;
 }
 
-.section {
+.home-para1 > div {
   flex: 1;
-  padding: 20px;
-  background-color: #f5f5f5;
+}
+
+.sp {
+  color: #007bff;
+}
+
+#pic {
+  max-width: 100%;
+  height: 500px;
   border-radius: 10px;
 }
 
-.section h2 {
-  color: #333;
-  margin-bottom: 10px;
+.home-para1 > div {
+  border-radius: 5px;
+  margin-right: 40px;
+  margin-left: 40px;
 }
 
-.section p {
-  color: #666;
+.hp1 {
+  color: #007bff;
 }
 
-.publichome-links {
+.home-para2 {
+  padding: 20px;
+  margin-left: 50px;
+  margin-right: 50px;
   margin-top: 50px;
-  list-style-type: none;
-  padding: 0;
+  display: flex;
+  align-items: center;
+  background-color: #fb8a194d;
+  border-radius: 8px;
+}
+
+.home-para2 > div {
+  border-radius: 5px;
+  margin-right: 40px;
+  margin-left: 40px;
+}
+
+.home-para3 {
+  padding: 20px;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  background-color: rgb(145, 243, 230);
+  border-radius: 8px;
+}
+
+.home-para3 > div {
+  border-radius: 5px;
+  margin-right: 40px;
+  margin-left: 40px;
+}
+
+.home-para5 {
+  padding: 20px;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+}
+
+.home-para5 > div {
+  border-radius: 5px;
+  margin-right: 40px;
+  margin-left: 40px;
+}
+
+.hp2 {
+  color: #007bff;
   text-align: center;
 }
 
-.publichome-links li {
-  display: inline;
-  margin: 0 10px;
+#pic1 {
+  max-width: 100%;
+  height: 300px;
+  border-radius: 10px;
 }
 
-.publichome-links li a {
-  text-decoration: none;
-  color: #333;
-  padding: 8px 16px;
-  border: 1px solid #333;
-  border-radius: 5px;
-  transition: background-color 0.3s, color 0.3s;
+.log, .reg {
+  color: blue;
+  text-decoration: none; 
+  font-size: 16px;
+  font-weight: bold; 
+  
+}
+.reg{
+  margin-left: 20px;
 }
 
-.publichome-links li a:hover {
-  background-color: #333;
-  color: #fff;
+.log:hover {
+  color: darkblue; 
+}
+.reg:hover {
+  color: darkblue; 
+}
+
+
+@media screen and (max-width: 768px) {
+  .home-para1,
+  .home-para2,
+  .home-para3,
+  .home-para5 {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .home-para1 > div,
+  .home-para2 > div,
+  .home-para3 > div,
+  .home-para5 > div {
+    margin: 20px 0;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .hp {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hp {
+    font-size: 25px;
+  }
+
+  .hp1 {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .hp {
+    font-size: 20px;
+  }
+
+  .hp1 {
+    font-size: 18px;
+  }
+
+  .sp {
+    font-size: 14px;
+  }
 }

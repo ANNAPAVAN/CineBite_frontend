@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { Button, Form } from "react-bootstrap";
 import axios from "axios"
-import AdNav from './AdNav';
+import MovieAdminNav from './MovieAdminNav';
 
 function AdminMoviePage() {
   const [cats, setCats] = useState([  
@@ -46,7 +46,7 @@ function AdminMoviePage() {
 
   return (
     <>
-    <AdNav/>
+    <MovieAdminNav/>
     <div >
     <br></br>
       <br></br>

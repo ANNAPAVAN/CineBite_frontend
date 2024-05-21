@@ -8,7 +8,7 @@ import { useState,useEffect } from 'react';
 import axios from 'axios';
 
 
-function AdNav() {
+function MovieAdminNav() {
   const navItemsStyle = {
     marginLeft: 'auto', // Align items to the right
   };
@@ -44,24 +44,15 @@ function AdNav() {
 
   return (
     <Navbar bg="light" shadow="lg" expand="lg" fixed="top">
-      <Navbar.Brand style={{ fontSize: '24px', color: 'blue' }} as={Link} to="/admin">
+      <Navbar.Brand style={{ fontSize: '24px', color: 'blue' }} as={Link} to="/movieadminpage">
         Admin
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="ml-auto" style={navItemsStyle}>
+        <Nav className="ml-auto" style={navItemsStyle}> 
 
-          <Nav.Link as={Link} to="/adminfoodpage">Food</Nav.Link>
-          <Nav.Link as={Link} to="/hotelorders">Orders
-          <BiCart /> {orderCount > 0 && (
-              <Badge bg="danger" className="notification-badge">
-                {orderCount}
-              </Badge>
-            )}
-          </Nav.Link>
-          {/* <Nav.Link as={Link} to="/adminmoviepage">Movie</Nav.Link> */}
-          <Nav.Link as={Link} to="/foodAdmin">PostFood</Nav.Link>
-          {/* <Nav.Link as={Link} to="/movieAdmin">PostMovie</Nav.Link> */}
+          <Nav.Link as={Link} to="/adminmoviepage">Movie</Nav.Link> 
+          <Nav.Link as={Link} to="/movieAdmin">PostMovie</Nav.Link>
 
           <Nav.Link onClick={handleLogout}>LogOut</Nav.Link>
         </Nav>
@@ -70,4 +61,4 @@ function AdNav() {
   );
 }
 
-export default AdNav;
+export default MovieAdminNav;

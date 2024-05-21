@@ -2,10 +2,10 @@ import React,{useEffect} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 import 'bootstrap-icons/font/bootstrap-icons.css'; // Import Bootstrap Icons CSS
 import { Navbar, Nav } from 'react-bootstrap'; // Import Bootstrap components as needed
-import AdNav from './AdNav';
+import MovieAdminNav from './MovieAdminNav';
 import axios from "axios";
 
-function Admin() {
+function MovieAdminPage() {
   
 
 
@@ -27,7 +27,7 @@ function Admin() {
         };   
         const response = await axios.get(`${process.env.REACT_APP_BACKEND}/api/auth/getAdminToken`, config);
         console.log(response.data);
-        localStorage.setItem("hotel",response.data.hotel)
+        localStorage.setItem("hotel",response.data.theatre)
         localStorage.setItem("address",response.data.address)
  
   
@@ -43,12 +43,12 @@ function Admin() {
 
   return (
     <>
-      <AdNav/>
-      <div className="admin-container">
+      <MovieAdminNav/>
+      <div className="admin-container-movie">
         {/* <h1 className="admin-head">Admin Dashboard</h1> */}
         
         <div className="admin-section">
-          <h2 className="admin-head"><strong>Manage Food Items</strong></h2>
+          <h2 className="admin-head"><strong>Manage Movie Items</strong></h2>
           <p>
             In the Food section, you can perform actions such as adding new food items, editing existing ones, or deleting items from the menu. Ensure that the food menu remains updated with the latest offerings to provide users with a delightful dining experience.
           </p>
@@ -65,5 +65,5 @@ function Admin() {
   );
 }
 
-export default Admin;
+export default MovieAdminPage;
 

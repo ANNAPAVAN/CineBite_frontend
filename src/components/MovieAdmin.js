@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import { Form, FormGroup } from 'react-bootstrap';
 import axios from 'axios';
-import AdNav from './AdNav';
+import MovieAdminNav from './MovieAdminNav';
 
 function MovieAdmin() {
   const [post, setPost] = useState({
@@ -55,7 +55,7 @@ function MovieAdmin() {
 
   return (
     <>
-    <AdNav/>
+    <MovieAdminNav/>
     <div className="movie-admin-container">
       <div className="movie-admin-main">
         <div className="movie-admin-form">

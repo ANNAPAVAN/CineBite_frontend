@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
-const Login = () => {
+const MovieLogin = () => {
   const [email, setName] = useState('');
   const [password, setPassword] = useState('');
   const [tokenExists, setTokenExists] = useState(false);
@@ -20,7 +20,7 @@ const Login = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post(`${process.env.REACT_APP_BACKEND}/api/auth/adminlogin`, {
+      const response = await axios.post(`${process.env.REACT_APP_BACKEND}/api/auth/movieadminlogin`, {
         email,
         password,
       });
@@ -78,4 +78,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default MovieLogin;

@@ -40,7 +40,7 @@ const Login = () => {
         // console.log(response2.data,"-------------------------");
    
         const response = await axios.get(`${process.env.REACT_APP_BACKEND}/api/auth/getToken`, config);
-        console.log(response.data);
+        // console.log(response.data);
         const myuser_id = localStorage.getItem("user_id");
         if(response.data._id === myuser_id)
         {

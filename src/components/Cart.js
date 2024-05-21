@@ -139,7 +139,7 @@ const Cart = () => {
           )}
         </div>
 
-      <h1>Ordered Items</h1>
+      <h1 className="food-hotel-head">Ordered Items</h1>
       <div className="food-container">
         {orders.map((order) => (
           <div key={order._id} className="food-item">

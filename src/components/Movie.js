@@ -1,5 +1,6 @@
 // Movie.js
 import React, { useEffect, useState } from 'react';
+import MovieAdminNav from './MovieAdminNav';
 import Navbar_ from './Navbar_';
 
 function Movie() {
